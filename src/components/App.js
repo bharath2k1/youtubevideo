@@ -3,6 +3,7 @@ import SearchBox from "./SearchBox";
 import youtube from "../API/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import KEY from "../API";
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
@@ -16,7 +17,7 @@ class App extends React.Component {
         q: term,
         part: "snippet",
         maxResults: 5,
-        key: "AIzaSyDBzwjdqDLBx5rlunmKH8nJLMR53dppZxw",
+        key: KEY,
       },
     });
     this.setState({
